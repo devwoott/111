@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AActivity">
+    <TextView
+        android:id="@+id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="처음이다"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <EditText
+        android:id="@+id/textform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="아이디를 입력해주세요"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textform"
+        android:text="변경하기"
+        />
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        android:text="랄랄라"
+        />
+<!--    ViewGroup : RelativeLayout, LinearLayout, Frame, -->
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/textview1">
+        <TextView
+            android:id="@+id/linear00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView In Linear"/>
+        <TextView
+            android:id="@+id/linear01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView In Linear"/>
+        <TextView
+            android:id="@+id/linear02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView In Linear"/>
+        <TextView
+            android:id="@+id/linear03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView In Linear"/>
+        <TextView
+            android:id="@+id/linear04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView In Linear"/>
+        <TextView
+            android:id="@+id/linear05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView In Linear"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear">
+        <Button
+            android:id="@+id/button01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "버튼1"/>
+        <Button
+            android:id="@+id/button02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button01"
+            android:text = "버튼2"
+            />
+        <Button
+            android:id="@+id/button03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/button02"
+            android:layout_below="@id/button01"
+            android:text = "버튼3"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/relative"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="car1 Start"
+        />
+    <Button
+        android:id="@+id/button_a2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/relative"
+        app:layout_constraintLeft_toRightOf="@id/button_a1"
+        android:text="car2 Start"
+        />
+    <Button
+        android:id="@+id/button04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="random으로 입장"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
